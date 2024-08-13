@@ -687,7 +687,12 @@ figcaption {
 }
 
 .text-size-medium {
+  margin-top: 16px;
   font-size: 1.125rem;
+}
+
+.text-size-medium.small {
+  font-size: .7rem;
 }
 
 .icon-small {
@@ -1276,6 +1281,7 @@ figcaption {
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: 1fr;
   align-items: center;
+  width: 100%;
   display: grid;
 }
 
@@ -2033,6 +2039,17 @@ figcaption {
   font-family: Changa One, Impact, sans-serif;
 }
 
+.code-embed {
+  border-top: 1px solid #0c84c9;
+  max-width: 350px;
+  padding-top: 1em;
+}
+
+.code-embed-2 {
+  border-top: 1px solid #424040;
+  display: none;
+}
+
 @media screen and (max-width: 991px) {
   h1 {
     font-size: 3.25rem;
@@ -2055,7 +2072,8 @@ figcaption {
   }
 
   .page-wrapper {
-    min-height: 810px;
+    height: auto;
+    min-height: 0;
   }
 
   .show-tablet {
@@ -2346,15 +2364,20 @@ figcaption {
 
   .header_component {
     grid-row-gap: 4rem;
+    flex-flow: row-reverse wrap-reverse;
     grid-template-columns: 1fr;
     grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
     min-height: auto;
+    display: flex;
   }
 
   .header_content {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    display: none;
+    display: flex;
   }
 
   .cta_content {
@@ -2585,6 +2608,10 @@ figcaption {
     margin-left: 0;
     display: flex;
   }
+
+  .code-embed {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -2620,6 +2647,10 @@ figcaption {
 
   .hide-mobile-landscape {
     display: none;
+  }
+
+  .page-wrapper {
+    min-height: 0;
   }
 
   .show-mobile-landscape {
@@ -2821,7 +2852,13 @@ figcaption {
   }
 
   .header_component {
+    grid-column-gap: 0rem;
     grid-row-gap: 3rem;
+  }
+
+  .header_image-wrapper {
+    width: 270px;
+    margin-top: 2em;
   }
 
   .cta_button-wrapper {
@@ -2948,6 +2985,10 @@ figcaption {
 
   .navbar1_menu-button {
     display: none;
+  }
+
+  .hero-image {
+    box-shadow: 8px 0 20px 10px #3b3a3a08, 0 -6px 13px 6px #717f8485;
   }
 
   .tst-large-qoute {
